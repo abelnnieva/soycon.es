@@ -1,0 +1,95 @@
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+
+// Color palette
+$color-cyan:              #00BCD4;
+$color-red:               #F44336;
+$color-white:             #FFF;
+$color-light-gray:        #FAFAFA;
+$color-gray:              #333;
+$color-dark-gray:         #252525;
+$color-black:             #000;
+
+
+
+
+
+// UI color application
+$color-text:                      $color-gray;
+$color-brand:                     $color-cyan;
+
+
+
+
+
+// Page
+$inuit-base-text-color:           $color-text;
+
+
+
+
+
+// Links
+$color-links:                     $color-red;
+$color-links-hover:               $color-brand;
+
+
+
+
+
+// Iconic
+$color-iconic:                    $color-light-gray;
+
+
+
+
+
+// Site nav
+$site-nav-color:                  $color-white;
+$site-nav-bck-filled:             $color-white;
+$site-nav-color-filled:           $color-dark-gray;
+
+
+
+
+// Page head
+$page-head-color:                 $color-white;
+$page-head-bck:                   $color-dark-gray;
+$page-head-masthead-bck:          $color-cyan;
+$page-project-head-color:         $color-dark-gray;
+$page-project-head-overlay-bck:   $color-white;
+
+
+
+
+
+// Page foot
+$page-foot-bck:                   $color-red;
+$page-foot-color:                 $color-white;
+
+
+
+
+
+// Jumbotron
+$jumbotron-last-projects-bck:     $color-light-gray;
+$jumbotron-contact-bck:           $color-dark-gray;
+$jumbotron-contact-color:         $color-white;
+$jumbotron-not-found-color:       $color-white;
+
+
+
+
+
+// Thumbnail
+$thumbnail-post-color:                $color-dark-gray;
+$thumbnail-post-even-hover-color:     $color-red;
+$thumbnail-post-odd-hover-color:      $color-cyan;
+
+
+
+
+
+// Post list
+$last-projects-color:                 $color-dark-gray;

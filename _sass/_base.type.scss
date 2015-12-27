@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+
+// Internal variables
+$summary-font-size:               24px;
+$summary-font-size-lap-and-up:    26px;
+
+/**
+ * Typographical base selectors.
+ */
+
+/**
+ * Headings 1–6.
+ */
+@include headings() {
+  font-weight: $light;
+}
+
+
+
+
+
+.summary {
+  @include font-size($summary-font-size, false);
+  font-weight: $light;
+
+  @include media-query(lap-and-up) {
+    @include font-size($summary-font-size-lap-and-up, false);
+  }
+}

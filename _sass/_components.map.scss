@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #MAP
+\*------------------------------------*/
+
+// Internal variables
+$map-height:              400px;
+$map-height-lap-and-up:   500px;
+$map-width:               100%;
+
+.map {
+
+  iframe {
+    display: block;
+    height: $map-height;
+    width: $map-width;
+
+    @include media-query(lap-and-up) {
+      height: $map-height-lap-and-up;
+      width: $map-width;
+    }
+  }
+}

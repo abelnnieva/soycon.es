@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #ABOUT-TEAM
+\*------------------------------------*/
+
+// Internal variables
+$about-team-padding:                double($spacing-unit);
+$about-team-padding-lap-and-up:     double($spacing-unit--large);
+
+.about-team {
+  padding-top: $about-team-padding;
+  text-align: center;
+
+  @include media-query(lap-and-up) {
+    padding-top: $about-team-padding-lap-and-up;
+  }
+}

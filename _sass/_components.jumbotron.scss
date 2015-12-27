@@ -1,0 +1,100 @@
+/*------------------------------------*\
+    #JUMBOTRON
+\*------------------------------------*/
+
+// Internal variables
+$jumbotron-padding:                               double($spacing-unit);
+$jumbotron-padding-lap-and-up:                    double($spacing-unit--large);
+$jumbotron-subtitle-font-size:                    24px;
+$jumbotron-subtitle-font-size-lap-and-up:         34px;
+$jumbotron-large-padding:                         double($spacing-unit--large);
+$jumbotron-large-padding-lap-and-up:              quadruple($spacing-unit--large);
+$jumbotron-overlay-opacity:                       .8;
+$jumbotron-title-font-size:                       18px;
+$jumbotron-contact-title-font-size:               38px;
+$jumbotron-contact-title-font-size-lap-and-up:    48px;
+$jumbotron-not-found-title-font-size:             200px;
+
+.jumbotron {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: $jumbotron-padding 0;
+  text-align: center;
+
+  @include media-query(lap-and-up) {
+    padding: $jumbotron-padding-lap-and-up 0;
+  }
+}
+
+  .jumbotron__title {
+    @include font-size($jumbotron-title-font-size);
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+
+  .jumbotron__subtitle {
+    @include font-size($jumbotron-subtitle-font-size, false);
+    margin-bottom: $spacing-unit;
+
+    @include media-query(lap-and-up) {
+      @include font-size($jumbotron-subtitle-font-size-lap-and-up);
+      margin-bottom: $spacing-unit--large;
+    }
+  }
+
+  .jumbotron__title,
+  .jumbotron__subtitle {
+    text-align: center;
+  }
+
+
+
+
+
+.jumbotron--last-projects {
+  background: $jumbotron-last-projects-bck;
+}
+
+
+
+
+
+.jumbotron--contact {
+  background-image: url('/assets/img/bck.jumbotron.contact.jpg');
+  padding: 0;
+
+  .jumbotron__title {
+    @include font-size($jumbotron-contact-title-font-size);
+    color: $jumbotron-contact-color;
+    margin-bottom: $spacing-unit;
+
+    @include media-query(lap-and-up) {
+      @include font-size($jumbotron-contact-title-font-size-lap-and-up);
+      margin-bottom: $spacing-unit--large;
+    }
+  }
+
+  .jumbotron__overlay {
+    background-color: rgba($jumbotron-contact-bck, $jumbotron-overlay-opacity);
+    padding: $jumbotron-large-padding 0;
+
+    @include media-query(lap-and-up) {
+      padding: $jumbotron-large-padding-lap-and-up 0;
+    }
+  }
+}
+
+
+
+
+
+.jumbotron--not-found {
+  background-color: $jumbotron-contact-bck;
+  padding: $jumbotron-large-padding 0;
+  color: $jumbotron-not-found-color;
+
+  .jumbotron__title {
+    @include font-size($jumbotron-not-found-title-font-size, false);
+  }
+}

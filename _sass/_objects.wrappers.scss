@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #WRAPPERS
+\*------------------------------------*/
+
+// Internal variables
+$wrapper-width:         80;
+$wrapper-light-width:   53;
+
+.wrapper {
+  @include rem-fallback('max-width', $wrapper-width);
+  margin: 0 auto;
+  padding-right: $spacing-unit--small;
+  padding-left:  $spacing-unit--small;
+
+  @include media-query(lap-and-up) {
+    padding-right: $spacing-unit;
+    padding-left:  $spacing-unit;
+  }
+}
+
+
+
+
+.wrapper--light {
+  @include rem-fallback('max-width', $wrapper-light-width);
+}

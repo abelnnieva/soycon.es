@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    #LAST-PROJECTS
+\*------------------------------------*/
+
+// Internal variables
+$thumbnail-image-hover-opacity:           .8;
+$thumbnail-image-hover-height:            100%;
+$thumbnail-image-hover-width:             100%;
+
+.last-projects {
+  text-align: center;
+
+  li:nth-child(even) {
+
+    .last-projects__link {
+
+      @include attention() {
+
+        .thumbnail__image:before {
+          background: rgba($thumbnail-post-even-hover-color, $thumbnail-image-hover-opacity);
+        }
+      }
+    }
+  }
+
+  li:nth-child(odd) {
+
+    .last-projects__link {
+
+      @include attention() {
+
+        .thumbnail__image:before {
+          background: rgba($thumbnail-post-odd-hover-color, $thumbnail-image-hover-opacity);
+        }
+      }
+    }
+  }
+}
+
+  .last-projects__item {
+    margin: 0 $spacing-unit--small;
+    vertical-align: top;
+  }
+
+  .last-projects__link {
+    color: $last-projects-color;
+
+    @include attention() {
+      color: $last-projects-color;
+
+      .thumbnail__image:before {
+        content: '';
+        height: $thumbnail-image-hover-height;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: $thumbnail-image-hover-width;
+      }
+    }
+  }

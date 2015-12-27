@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+// Internal variables
+$link-transition:       .2s;
+
+a {
+  @include vendor(transition, $link-transition);
+  color: $color-links;
+  text-decoration: none;
+
+  @include attention() {
+    color: $color-links-hover;
+  }
+
+}

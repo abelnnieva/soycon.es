@@ -1,0 +1,176 @@
+/*------------------------------------*\
+    #SOYCON
+\*------------------------------------*/
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Default..............inuitcss’ default settings.
+ * Global...............Globally-available variables and settings/config.
+ * Colors...............Manage our color palette in isolation.
+ * Responsive...........Set up and name our breakpoints.
+ *
+ * TOOLS
+ * Functions............inuitcss’ default functions.
+ * Mixins...............inuitcss’ default mixins.
+ * Mixins...............Our extension of inuitcss’ mixins.
+ * Responsive...........Responsive tooling (requires responsive settings).
+ * Aliases..............Aliases onto longer inuitcss variables and mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Reset................A pared back reset to remove margins.
+ * Box-sizing...........Better default `box-sizing`.
+ * Shared...............Sensibly and tersely share global commonalities.
+ *
+ * BASE
+ * Page.................Page-level styles (HTML element).
+ * Page.................Our extension of the inuitcss page module.
+ * Headings.............Heading styles
+ * Type.................Misc type styles
+ * Links................Hyperlink styles
+ * Lists................inuitcss list styles
+ * Images...............inuitcss images
+ *
+ * OBJECTS
+ * Wrappers.............Wrappers and page constraints.
+ * Buttons..............inuitcss’ buttons module.
+ * Media................The media object.
+ * List-inline..........The list inline object.
+ * list-block...........The list block object.
+ *
+ * COMPONENTS
+ * Iconic...............Icon styles.
+ * Site-nav.............Site’s main nav area.
+ * Page-head............Page header styles.
+ * Page-body............Page body styles.
+ * Jumbotron............Jumbotron styles.
+ * Page-foot............Page footer styles.
+ * Thumbnails...........Thumbnails styles.
+ * Last-projects........Last projects list styles.
+ * About-team...........About team list styles.
+ * Buttons..............Buttons styles.
+ * Map..................Map styles.
+ * Contact-ways.........Contact ways list styles.
+ * Project-meta.........Project meta list styles.
+ *
+ * TRUMPS
+ * Clearfix.............I can’t believe we still need this in 2014.
+ * Spacing..............Micro-level spacing.
+ * Show/hide............Helpers to show and side stuff.
+ */
+
+
+
+
+
+/**
+ * #SETTINGS
+ */
+@import "../bower_components/inuit-defaults/settings.defaults";
+@import "settings.global";
+@import "settings.colors";
+@import "../bower_components/inuit-responsive-settings/settings.responsive";
+
+
+
+
+
+/**
+ * #TOOLS
+ */
+@import "../bower_components/inuit-functions/tools.functions";
+@import "../bower_components/inuit-mixins/tools.mixins";
+@import "tools.mixins";
+@import "../bower_components/inuit-responsive-tools/tools.responsive";
+@import "tools.aliases";
+
+
+
+
+
+/**
+ * #GENERIC
+ */
+@import "../bower_components/inuit-normalize/generic.normalize";
+@import "../bower_components/inuit-reset/generic.reset";
+@import "../bower_components/inuit-box-sizing/generic.box-sizing";
+@import "../bower_components/inuit-shared/generic.shared";
+
+
+
+
+
+/**
+ * #BASE
+ */
+@import "../bower_components/inuit-page/base.page";
+@import "base.page";
+
+$inuit-heading-size-1: 68px;
+$inuit-heading-size-2: 34px;
+$inuit-heading-size-3: 28px;
+$inuit-heading-size-4: 22px;
+$inuit-heading-size-5: 18px;
+$inuit-heading-size-6: 16px;
+@import "../bower_components/inuit-headings/base.headings";
+
+@import "base.type";
+@import "base.links";
+@import "../bower_components/inuit-lists/base.lists";
+@import "../bower_components/inuit-images/base.images";
+
+
+
+
+
+/**
+ * #OBJECTS
+ */
+@import "objects.wrappers";
+
+$inuit-btn-background:      $color-brand;
+$inuit-btn-radius:          $base-round;
+$inuit-btn-border-width:    2px;
+@import "../bower_components/inuit-buttons/objects.buttons";
+@import "../bower_components/inuit-media/objects.media";
+@import "../bower_components/inuit-list-inline/objects.list-inline";
+
+$inuit-list-block-padding:  0;
+@import "../bower_components/inuit-list-block/objects.list-block";
+
+
+
+
+
+/**
+ * #COMPONENTS
+ */
+@import "components.iconic";
+@import "components.site-nav";
+@import "components.page-head";
+@import "components.page-body";
+@import "components.jumbotron";
+@import "components.page-foot";
+@import "components.thumbnails";
+@import "components.last-projects";
+@import "components.about-team";
+@import "components.buttons";
+@import "components.map";
+@import "components.contact-ways";
+@import "components.project-meta";
+
+
+
+
+
+/**
+ * #TRUMPS
+ */
+@import "../bower_components/inuit-clearfix/trumps.clearfix";
+
+$inuit-enable-margins--none:    true;
+@import "../bower_components/inuit-spacing/trumps.spacing";
+
+@import "trumps.show-hide";

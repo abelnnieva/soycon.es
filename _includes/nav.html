@@ -1,0 +1,23 @@
+<nav class="site-nav" role="navigation">
+
+  <div class="wrapper">
+
+    <a class="site-nav__home" href="{{ site.baseurl }}/">
+      <span class="[ icon  icon--soycon-logo ]  site-nav__logo"></span>
+      <span class="hide">Inicio</span>
+    </a>
+
+    <ul class="site-nav__list  list-inline" role="menubar">
+      {% for my_page in site.pages %}
+        {% if my_page.nav-title %}
+        <li class="site-nav__item" role="menuitem">
+          <a class="site-nav__link  site-nav__{{ my_page.class }}"
+            href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.nav-title }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+  </div>
+
+</nav><!-- /site-nav -->

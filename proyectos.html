@@ -1,0 +1,37 @@
+---
+layout: page
+title: Proyectos
+nav-title: Proyectos
+permalink: /proyectos/
+class: projects
+---
+
+<div class="wrapper">
+
+  <ul class="last-projects  list-inline">
+
+    {% for post in site.posts %}
+      <li class="last-projects__item">
+
+        <a class="last-projects__link" href="{{ post.url | prepend: site.baseurl }}">
+
+          <article class="thumbnail" itemscope itemType="http://schema.org/BlogPosting">
+
+            <div class="thumbnail__image">
+              <img itemprop="thumbnail" src="{{ post.thumbnail | prepend: site.baseurl }}" />
+            </div>
+
+            <h3 class="thumbnail__title" itemprop="headline">{{ post.title }}</h3>
+
+            <p class="thumbnail__meta" itemprop="keywords">{{ post.meta }}</p>
+
+          </article><!-- /thumbnail -->
+
+        </a>
+
+      </li>
+    {% endfor %}
+
+  </ul><!-- /last-projects -->
+
+</div>

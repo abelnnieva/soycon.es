@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Soycon
+subtitle: Empresa constructora en Tenerife
+email: info@soycon.es
+description: > # this means to ignore newlines until "baseurl:"
+  Somos una empresa constructora ubicada en Tenerife. Ofrecemos servicios
+  relacionados con la construcción, reforma de viviendas y locales comerciales,
+  rehabilitación de fachadas y obra civil.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://soycon.es" # the base hostname & protocol for your site
+twitter_username: soycon_es
+
+# Build settings
+markdown: kramdown
+exclude: [bower_components, node_modules, bower.json, gulpfile.coffe, LICENSE, package.json, README.md]

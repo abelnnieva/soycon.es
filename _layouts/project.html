@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<main class="page-body" role="main">
+
+  <div class="wrapper  wrapper--light">
+
+    <ul class="project-meta  list-inline">
+
+      {% if page.client %}
+        <li class="project-meta__item">
+          <h5 class="project-meta__label  mb0">Cliente</h5>
+          <span class="project-meta__value">{{ page.client }}</span>
+        </li>
+      {% endif %}
+
+      {% if page.duration %}
+        <li class="project-meta__item">
+          <h5 class="project-meta__label  mb0">Fecha</h5>
+          <span class="project-meta__value">{{ page.duration }}</span>
+        </li>
+      {% endif %}
+
+    </ul><!-- /project-meta -->
+
+    {{ content }}
+
+  </div>
+
+</main><!-- /page-body -->
+
+<article class="jumbotron  jumbotron--contact">
+
+  <div class="jumbotron__overlay">
+
+    <h2 class="jumbotron__title">¿Quiere empezar un nuevo proyecto?</h2>
+
+    <a href="/contacto/" class="btn  btn--white  btn--outline">Contacte con nosotros</a>
+
+  </div>
+
+</article><!-- /jumbotron -->

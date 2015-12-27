@@ -1,0 +1,30 @@
+/*------------------------------------*\
+  #PROJECTS-META
+\*------------------------------------*/
+
+// Internal variables
+$project-meta-padding:              double($spacing-unit);
+$project-meta-padding-lap-and-up:   double($spacing-unit--large);
+$project-meta-item-width:           33%;
+
+.project-meta {
+  padding-bottom: $project-meta-padding;
+
+  @include media-query(lap-and-up) {
+    padding-bottom: $project-meta-padding-lap-and-up;
+  }
+}
+
+  .project-meta__item {
+    vertical-align: top;
+    text-align: left;
+
+    @include media-query(lap-and-up) {
+      width: $project-meta-item-width;
+      margin-right: $spacing-unit;
+    }
+  }
+
+  .project-meta__label {
+    font-weight: $bold;
+  }

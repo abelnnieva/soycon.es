@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #PAGE-BODY
+\*------------------------------------*/
+
+// Internal variables
+$page-body-padding:             double($spacing-unit);
+$page-body-padding-lap-and-up:  double($spacing-unit--large);
+$page-body-font-size:           18px;
+
+.page-body {
+  @extend %clearfix;
+  padding: $page-body-padding 0;
+
+  @include media-query(lap-and-up) {
+    padding: $page-body-padding-lap-and-up 0;
+    text-align: justify;
+  }
+
+  p {
+    @include font-size($page-body-font-size, false);
+  }
+}

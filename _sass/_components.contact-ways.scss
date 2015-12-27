@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #CONTACT-WAYS
+\*------------------------------------*/
+
+// Internal variables
+$contact-ways-action-size:              28px;
+$contact-ways-action-size-lap-and-up:   34px;
+$contact-ways-width:                    50%;
+
+.contact-ways {
+  @extend %clearfix;
+  text-align: center;
+
+  @include media-query(lap-and-up) {
+    display: inline-block;
+    float: left;
+    width: $contact-ways-width;
+  }
+}
+
+  .contact-ways__label {
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+
+  .contact-ways__action {
+    @include font-size($contact-ways-action-size, false);
+    margin: 0 0 $spacing-unit 0;
+
+    @include media-query(lap-and-up) {
+      @include font-size($contact-ways-action-size-lap-and-up, false);
+      margin: 0 0 $spacing-unit--large 0;
+    }
+  }

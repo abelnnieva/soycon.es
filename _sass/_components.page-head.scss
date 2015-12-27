@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    #PAGE-HEAD
+\*------------------------------------*/
+
+// Internal variables
+$page-head-height:                        22;
+$page-head-height-lap-and-up:             28;
+$page-head-title-size:                    60px;
+$page-head-title-size-lap-and-up:         100px;
+$page-head-masthead-height:               34;
+$page-head-masthead-height-lap-and-up:    46;
+$page-head-subtitle-size:                 30px;
+$page-head-subtitle-size-lap-and-up:      40px;
+$page-head-overlay-opacity:               .8;
+
+.page-head {
+  @include rem-fallback('height', $page-head-height);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $page-head-color;
+  display: table;
+  position: relative;
+  text-align: center;
+  width: 100vw;
+
+  @include media-query(lap-and-up) {
+    @include rem-fallback('height', $page-head-height-lap-and-up);
+  }
+}
+
+  .page-head__title {
+    @include font-size($page-head-title-size, false);
+    font-weight: $bold;
+    text-transform: uppercase;
+
+    @include media-query(lap-and-up) {
+      @include font-size($page-head-title-size-lap-and-up, false);
+    }
+  }
+
+  .page-head__overlay {
+    background-color: rgba($page-head-bck, .8);
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .page-head__copy {
+    bottom: $spacing-unit--small;
+    font-weight: $bold;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+
+
+
+
+.page-head--masthead {
+  @include rem-fallback('height', $page-head-masthead-height);
+  background-image: url('/assets/img/bck.intro.jpg');
+
+  @include media-query(lap-and-up) {
+    @include rem-fallback('height', $page-head-masthead-height-lap-and-up);
+  }
+  .page-head__subtitle {
+    @include font-size($page-head-subtitle-size);
+
+    @include media-query(lap-and-up) {
+      @include font-size($page-head-subtitle-size-lap-and-up);
+    }
+  }
+
+  .page-head__overlay {
+    background-color: rgba($page-head-masthead-bck, $page-head-overlay-opacity);
+  }
+}

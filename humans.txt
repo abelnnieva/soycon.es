@@ -1,0 +1,11 @@
+/* TEAM */
+Name        : Abel Nieva
+Site        : http://abelnieva.com
+Twitter     : @abelnieva
+Location    : Madrid, Spain.
+
+/* SITE */
+Last update : 2015/06/15
+Standards   : HTML5, CSS3 & JavaScrip.
+Components  : InuitCSS, jQuery.
+Software    : Sublime Text 3, CoffeeScript, SASS & passion.

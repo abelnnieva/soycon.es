@@ -1,0 +1,39 @@
+{
+  "name": "soycon",
+  "version": "1.0.0",
+  "description": "Source code for soycon.es.",
+  "homepage": "http://soycon.es",
+  "author": {
+    "name": "Abel Nieva",
+    "email": "biz@abelnieva.com"
+  },
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-starter-kit": "~0.2.9",
+    "inuit-responsive-settings": "~0.1.5",
+    "inuit-responsive-tools": "~0.1.3",
+    "inuit-reset": "~0.1.1",
+    "inuit-shared": "~0.1.5",
+    "inuit-headings": "~0.3.1",
+    "inuit-lists": "~0.1.0",
+    "inuit-images": "~0.3.3",
+    "inuit-buttons": "~0.4.2",
+    "inuit-layout": "~0.3.2",
+    "inuit-box": "~0.4.4",
+    "inuit-media": "~0.4.2",
+    "inuit-flag": "~0.3.2",
+    "inuit-list-inline": "~0.3.2",
+    "inuit-clearfix": "~0.2.2",
+    "inuit-widths": "~0.4.2",
+    "inuit-spacing": "~0.7.0",
+    "jquery": "~2.1.4",
+    "inuit-list-block": "~0.4.2"
+  }
+}

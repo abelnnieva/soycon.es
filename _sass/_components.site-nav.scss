@@ -1,0 +1,117 @@
+/*------------------------------------*\
+  #SITE-NAV
+\*------------------------------------*/
+
+// Internal variables
+$site-nav-animation:            all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+$logo-height:                   32px;
+$logo-height-lap-and-up:        48px;
+$link-letter-spacing:           0.05em;
+$link-font-size:                12px;
+$link-font-size-lap-and-up:     16px;
+
+.site-nav {
+  @include vendor(transition, $site-nav-animation);
+  @extend %clearfix;
+  padding: $spacing-unit--small 0;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+  z-index: 10;
+
+  @include media-query(lap-and-up) {
+    padding: $spacing-unit--large 0;
+    text-align: inherit;
+  }
+}
+
+  .site-nav__home {
+    display: block;
+
+    @include media-query(lap-and-up) {
+      float: left;
+    }
+  }
+
+    .site-nav__logo {
+      @include font-size($logo-height, 1);
+      color: $site-nav-color;
+      height: $logo-height;
+      width: $logo-height;
+
+      @include media-query(lap-and-up) {
+        @include font-size($logo-height-lap-and-up, 1);
+        display: block;
+        height: $logo-height-lap-and-up;
+        width: $logo-height-lap-and-up;
+      }
+    }
+
+  .site-nav__list {
+    @include media-query(lap-and-up) {
+      float: right;
+    }
+  }
+
+    .site-nav__item {
+      padding-left: $inuit-base-spacing-unit--small;
+      padding-right: $inuit-base-spacing-unit--small;
+    }
+
+      .site-nav__link {
+        @include font-size($link-font-size, $logo-height);
+        color: $site-nav-color;
+        display: block;
+        font-weight: $semi-bold;
+        letter-spacing: $link-letter-spacing;
+        position: relative;
+        text-transform: uppercase;
+
+        &:after {
+          bottom: halve($spacing-unit--small);
+          content: '';
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
+
+        @include attention() {
+          color: $site-nav-color;
+
+          &:after {
+            border: 1px solid $site-nav-color;
+          }
+        }
+
+        @include media-query(lap-and-up) {
+          @include font-size($link-font-size-lap-and-up, $logo-height);
+          line-height: $logo-height-lap-and-up;
+        }
+      }
+
+      @each $page in about contact projects {
+
+        .page--#{$page} .site-nav__#{$page} {
+          &:after {
+            border: 1px solid $site-nav-color;
+          }
+        }
+      }
+
+
+
+
+
+.site-nav--filled {
+  background: $site-nav-bck-filled;
+  padding: $spacing-unit 0;
+
+  .site-nav__logo,
+  .site-nav__link {
+    color: $site-nav-color-filled;
+
+    &:after {
+      border-color: $site-nav-color-filled;
+    }
+  }
+}

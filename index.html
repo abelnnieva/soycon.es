@@ -1,0 +1,69 @@
+---
+layout: landing
+class: home
+---
+
+<article class="jumbotron">
+
+  <div class="wrapper  wrapper--light">
+
+    <h3 class="jumbotron__title">Soycon</h3>
+
+    <h2 class="jumbotron__subtitle">Somos una empresa constructora ubicada en Tenerife. Ofrecemos servicios relacionados con la
+      construcción, reforma de viviendas y locales comerciales, rehabilitación de fachadas y obra civil.</h2>
+
+    <a href="/quienes-somos/" class="btn  btn--dark-gray  btn--outline">Más sobre Soycon</a>
+
+  </div>
+
+</article>
+
+<section class="jumbotron  jumbotron--last-projects">
+
+  <div class="wrapper">
+
+    <h2 class="jumbotron__title">Obras realizadas</h2>
+
+    <ul class="last-projects  list-inline">
+
+      {% for post in site.posts limit:9 %}
+        <li class="last-projects__item">
+
+          <a class="last-projects__link" href="{{ post.url | prepend: site.baseurl }}">
+
+            <article class="thumbnail" itemscope itemType="http://schema.org/BlogPosting">
+
+              <div class="thumbnail__image">
+                <img itemprop="thumbnail" src="{{ post.thumbnail | prepend: site.baseurl }}" />
+              </div>
+
+              <h3 class="thumbnail__title" itemprop="headline">{{ post.title }}</h3>
+
+              <p class="thumbnail__meta" itemprop="keywords">{{ post.meta }}</p>
+
+            </article><!-- /thumbnail -->
+
+          </a>
+
+        </li>
+      {% endfor %}
+
+    </ul><!-- /last-projects -->
+
+    <a href="/proyectos/" class="btn  btn--dark-gray  btn--outline">Más proyectos</a>
+
+  </div>
+
+</section><!-- /jumbotron -->
+
+<article class="jumbotron  jumbotron--contact">
+
+  <div class="jumbotron__overlay">
+
+    <h2 class="jumbotron__title">¿Quiere empezar un nuevo proyecto?</h2>
+
+    <a href="/contacto/" class="btn  btn--white  btn--outline">Contacte con nosotros</a>
+
+  </div>
+
+</article><!-- /jumbotron -->

@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+// Internal variables
+$html-font-size:                              84%;
+$page-font-size:                              16px;
+$page-head-subtitle-margin:                   double($spacing-unit);
+$page-head-subtitle-margin-lap-and-up:        double($spacing-unit--large);
+$page-project-head-title-size:                28px;
+$page-project-head-title-size-lap-and-up:     64px;
+
+html {
+  font-family: $base-family;
+  font-size: $html-font-size;
+  font-weight: $light;
+
+  @include media-query(lap-and-up) {
+    @include font-size($page-font-size, false);
+  }
+}
+
+
+
+
+
+
+.page--about {
+
+  .page-head {
+    background-image: url('/assets/img/bck.about.jpg');
+    background-position: center top;
+  }
+}
+
+
+
+
+
+.page--contact {
+
+  .page-head {
+    background-image: url('/assets/img/bck.contact.jpg');
+    background-position: center;
+  }
+
+  .page-head__title,
+  .page-head__subtitle {
+    text-align: center;
+  }
+
+  .page-head__subtitle {
+    margin-bottom: $page-head-subtitle-margin;
+
+    @include media-query(lap-and-up) {
+      margin-bottom: $page-head-subtitle-margin-lap-and-up;
+    }
+  }
+}
+
+
+
+
+
+.page--projects {
+
+  .page-head {
+    background-image: url('/assets/img/bck.projects.jpg');
+    background-position: center;
+  }
+}
+
+
+
+
+
+
+.page--project {
+
+  .page-body {
+    padding-top: 0;
+  }
+
+  .site-nav {
+    .site-nav__logo,
+    .site-nav__link {
+      color: $site-nav-color-filled;
+
+      &:after {
+        border-color: $site-nav-color-filled;
+      }
+    }
+  }
+
+  .page-head__title {
+    @include font-size($page-project-head-title-size);
+    color: $page-project-head-color;
+
+    @include media-query(lap-and-up) {
+      @include font-size($page-project-head-title-size-lap-and-up);
+    }
+  }
+
+  .page-head__overlay {
+    background-color: $page-project-head-overlay-bck;
+  }
+}
+
+
+
+
+
+.page--not-found {
+
+  .page-body {
+    padding: 0;
+  }
+}

@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+.btn {
+  font-weight: $bold;
+  text-transform: uppercase;
+}
+
+
+
+
+
+.btn--dark-gray {
+  background-color: $color-white;
+  border-color: $color-dark-gray;
+}
+
+
+
+
+
+.btn--white {
+  background-color: $color-white;
+  border-color: $color-white;
+}
+
+
+
+
+
+.btn--outline {
+  background: none;
+
+  &.btn--dark-gray {
+    color: $color-dark-gray;
+
+    @include attention() {
+      background: $color-dark-gray;
+      color: $color-white;
+    }
+  }
+
+  &.btn--white {
+    color: $color-white;
+
+    @include attention() {
+      background: $color-white;
+      color: $color-dark-gray;
+    }
+  }
+}

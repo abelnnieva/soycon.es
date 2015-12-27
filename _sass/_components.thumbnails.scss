@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    #THUMBNAILS
+\*------------------------------------*/
+
+// Internal variables
+$thumbnail-height:            21;
+$thumbnail-title-font-size:   18px;
+$thumbnail-title-width:       23;
+
+.thumbnail {
+  text-align: center;
+
+  @include media-query(lap-and-up) {
+    @include rem-fallback('height', $thumbnail-height);
+    margin-bottom: $spacing-unit--large;
+  }
+}
+
+  .thumbnail__image {
+    position: relative;
+  }
+
+  .thumbnail__meta {
+    display: block;
+    line-height: 1;
+    margin-bottom: $spacing-unit--small;
+  }
+
+  .thumbnail__title {
+    @include rem-fallback('max-width', $thumbnail-title-width);
+    @include font-size($thumbnail-title-font-size);
+    font-weight: $semi-bold;
+    margin: 0 auto;
+    padding: $spacing-unit--small 0;
+    text-transform: uppercase;
+  }

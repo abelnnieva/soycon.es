@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    #PAGE-FOOT
+\*------------------------------------*/
+
+// Internal variables
+$page-foot-padding:                 double($spacing-unit);
+$page-foot-padding-lap-and-up:      double($spacing-unit--large);
+$page-foot-item-width:              100%;
+$page-foot-item-lap-and-up-width:   25%;
+$logo-size:                         48px;
+$page-foot-title:                   18px;
+$page-foot-copy-icon-size:          14px;
+
+.page-foot {
+  background-color: $page-foot-bck;
+  color: $page-foot-color;
+  padding: $page-foot-padding 0;
+  font-weight: $normal;
+
+  @include media-query(lap-and-up) {
+    padding: $page-foot-padding-lap-and-up 0;
+  }
+
+  a {
+    color: $page-foot-color;
+
+    @include attention() {
+      text-decoration: underline;
+    }
+  }
+}
+
+  .page-foot__list {
+    @extend %clearfix;
+    display: block;
+    margin-bottom: $spacing-unit;
+    text-align: center;
+
+    @include media-query(lap-and-up) {
+      text-align: left;
+    }
+  }
+
+  .page-foot__item {
+    display: block;
+    vertical-align: top;
+    width: $page-foot-item-width;
+    margin-bottom: $spacing-unit;
+
+    @include media-query(lap-and-up) {
+      display: inline;
+      float: left;
+      width: $page-foot-item-lap-and-up-width;
+    }
+  }
+
+  .page-foot__logo {
+    @include font-size($logo-size);
+  }
+
+  .page-foot__title {
+    @include font-size($page-foot-title);
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+
+  .page-foot__copy {
+    display: block;
+    color: $page-foot-color;
+    text-align: center;
+
+    a {
+      font-weight: $bold;
+    }
+
+    .icon {
+      @include font-size($page-foot-copy-icon-size);
+    }
+  }
