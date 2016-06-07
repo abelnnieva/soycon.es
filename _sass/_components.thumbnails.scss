@@ -18,11 +18,6 @@ $thumbnail-title-width:       23;
 
   .thumbnail__image {
     position: relative;
-
-    img {
-      width: 374px;
-      height: 250px;
-    }
   }
 
   .thumbnail__meta {
@@ -39,3 +34,14 @@ $thumbnail-title-width:       23;
     padding: $spacing-unit--small 0;
     text-transform: uppercase;
   }
+
+
+
+
+
+.thumbnail--fixed-size {
+  img {
+    width: 374px;
+    height: 250px;
+  }
+}
