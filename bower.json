@@ -34,6 +34,7 @@
     "inuit-widths": "~0.4.2",
     "inuit-spacing": "~0.7.0",
     "jquery": "~2.1.4",
-    "inuit-list-block": "~0.4.2"
+    "inuit-list-block": "~0.4.2",
+    "flexslider": "^2.6.1"
   }
 }

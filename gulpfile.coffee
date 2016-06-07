@@ -11,6 +11,7 @@ scomment  = require "gulp-strip-css-comments"
 uglify    = require "gulp-uglify"
 pkg       = require "./package.json"
 cp        = require "child_process"
+cleanCSS  = require "gulp-clean-css"
 
 messages = jekyllBuild: "<span style='color: grey'>Running:</span> $ jekyll build"
 
@@ -24,8 +25,9 @@ source =
   dest  : "./assets"
 
 thirds =
-  js    : [ "bower_components/jquery/dist/jquery.js"]
-  css   : []
+  js    : [ "bower_components/jquery/dist/jquery.js",
+            "bower_components/flexslider/jquery.flexslider.js"]
+  css   : [ "bower_components/flexslider/flexslider.css"]
   fonts : []
 
 
@@ -65,6 +67,7 @@ gulp.task "thirds", ->
 
   gulp.src thirds.css
     .pipe concat "#{pkg.name}.thirds.css"
+    .pipe cleanCSS()
     .pipe gulp.dest "#{source.dest}/css"
     .pipe sync.reload stream: true
 
