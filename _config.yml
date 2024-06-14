@@ -13,10 +13,19 @@ description: > # this means to ignore newlines until "baseurl:"
   Somos una empresa constructora ubicada en Tenerife. Ofrecemos servicios
   relacionados con la construcción, reforma de viviendas y locales comerciales,
   rehabilitación de fachadas y obra civil.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://soycon.es" # the base hostname & protocol for your site
+baseurl: "/soycon.es" # the subpath of your site, e.g. /blog
+url: "https://abelnnieva.github.io/soycon.es" # the base hostname & protocol for your site
 twitter_username: soycon_es
 
 # Build settings
 markdown: kramdown
-exclude: [bower_components, node_modules, bower.json, gulpfile.coffe, LICENSE, package.json, README.md]
+exclude:
+  [
+    bower_components,
+    node_modules,
+    bower.json,
+    gulpfile.coffe,
+    LICENSE,
+    package.json,
+    README.md,
+  ]
