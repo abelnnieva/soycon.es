@@ -12,7 +12,7 @@ class: home
     <h2 class="jumbotron__subtitle">Somos una empresa constructora ubicada en Tenerife. Ofrecemos servicios relacionados con la
       construcción, reforma de viviendas y locales comerciales, rehabilitación de fachadas y obra civil.</h2>
 
-    <a href="/quienes-somos/" class="btn  btn--dark-gray  btn--outline">Más sobre Soycon</a>
+    <a href="{{ "/quienes-somos/" | prepend: site.baseurl }}" class="btn  btn--dark-gray  btn--outline">Más sobre Soycon</a>
 
   </div>
 
@@ -50,7 +50,7 @@ class: home
 
     </ul><!-- /last-projects -->
 
-    <a href="/proyectos/" class="btn  btn--dark-gray  btn--outline">Más proyectos</a>
+    <a href="{{ "/proyectos/" | prepend: site.baseurl }}" class="btn  btn--dark-gray  btn--outline">Más proyectos</a>
 
   </div>
 
@@ -62,7 +62,7 @@ class: home
 
     <h2 class="jumbotron__title">¿Quiere empezar un nuevo proyecto?</h2>
 
-    <a href="/contacto/" class="btn  btn--white  btn--outline">Contacte con nosotros</a>
+    <a href="{{ "/contacto/" | prepend: site.baseurl }}" class="btn  btn--white  btn--outline">Contacte con nosotros</a>
 
   </div>
 
